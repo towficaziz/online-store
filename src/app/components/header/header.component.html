@@ -4,14 +4,14 @@
       <i class="fas fa-shipping-fast"></i>
       <strong>OnlineShop</strong>
       <div class="form-group">
-        <input type="text" placeholder="search products" class="form-control">
+        <input type="text" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products" class="form-control">
       </div>
       <!-- <div class="fas fa-search search-icon">
       </div> -->
     </div>
-    <button class="btn btn-primary">
+    <button routerLink="cart" class="btn btn-primary">
       <i class="fas fa-cart-plus"></i>
-      <div class="badge bg-danger">5</div>
+      <div class="badge bg-danger">{{totalItem}}</div>
     </button>
   </div>
 </header>
